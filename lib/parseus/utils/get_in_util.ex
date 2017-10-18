@@ -1,4 +1,6 @@
 defmodule Parseus.GetInUtil do
+  @moduledoc false
+
   def call(input, access_path) do
     get_in input, Enum.map(access_path, &map_access_key/1)
   end

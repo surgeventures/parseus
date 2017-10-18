@@ -1,4 +1,6 @@
 defmodule Parseus.AddErrorProcessor do
+  @moduledoc false
+
   alias Parseus.{
     Error,
     Set,
@@ -29,6 +31,3 @@ defmodule Parseus.AddErrorProcessor do
     |> Keyword.update!(key, &put_error(&1, rest, error))
   end
 end
-
-
-

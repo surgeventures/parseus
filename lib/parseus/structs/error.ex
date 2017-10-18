@@ -7,6 +7,7 @@ defmodule Parseus.Error do
             source: nil,
             info: []
 
+  @doc false
   def build(reason) when is_atom(reason) or is_binary(reason), do: build(reason: reason)
   def build({reason, info}), do: build(reason: reason, info: info)
   def build(error = %__MODULE__{}), do: error

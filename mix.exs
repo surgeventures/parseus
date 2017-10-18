@@ -12,7 +12,6 @@ defmodule Parseus.Mixfile do
      package: package(),
      aliases: aliases(),
      test_coverage: [tool: ExCoveralls],
-     escript: [main_module: Parseus.Command],
      preferred_cli_env: [
        check: :test,
        coveralls: :test,

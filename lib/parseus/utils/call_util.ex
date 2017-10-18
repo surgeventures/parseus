@@ -1,4 +1,6 @@
 defmodule Parseus.CallUtil do
+  @moduledoc false
+
   def call(callable, arg, opts \\ [])
   def call(callable, arg, []), do: call_with_args(callable, [arg])
   def call(callable, arg, opts), do: call_with_args(callable, [arg, opts])

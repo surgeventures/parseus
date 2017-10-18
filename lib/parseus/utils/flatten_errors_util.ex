@@ -1,4 +1,6 @@
 defmodule Parseus.FlattenErrorsUtil do
+  @moduledoc false
+
   alias Parseus.{Error, Set}
 
   def call(%Set{errors: errors}) do

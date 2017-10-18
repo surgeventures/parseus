@@ -1,4 +1,6 @@
 defmodule Parseus.GetInputPathUtil do
+  @moduledoc false
+
   alias Parseus.Set
 
   def call(%Set{mapping: mapping}, output_path) do

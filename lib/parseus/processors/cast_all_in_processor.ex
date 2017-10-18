@@ -33,9 +33,10 @@ defmodule Parseus.CastAllInProcessor do
     {:ok, GetInUtil.call(input, input_keys)}
   rescue
     exception in RuntimeError ->
+      stacktrace = System.stacktrace()
       case exception.message do
         "Access.all/0 expected a list" <> _ -> :error
-        _ -> raise(exception)
+        _ -> reraise(exception, stacktrace)
       end
   end
 

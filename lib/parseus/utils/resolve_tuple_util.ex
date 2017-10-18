@@ -1,4 +1,6 @@
 defmodule Parseus.ResolveTupleUtil do
+  @moduledoc false
+
   alias Parseus.Set
 
   def call(set, key) when not(is_list(key)), do: call(set, [key])
